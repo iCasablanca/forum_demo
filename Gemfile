@@ -6,12 +6,16 @@ gem 'rails', '3.0.10'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'mysql2'
 #gem 'powder'
 gem 'devise'
 gem 'will_paginate'
 gem 'paperclip'
 gem 'populator'
 gem 'faker'
+gem 'capistrano'
+gem 'capistrano-ext'
+
 
 # Use unicorn as the web server
 # gem 'unicorn'
