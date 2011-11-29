@@ -57,7 +57,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.17.2)
-    mysql2 (0.3.10)
+    mysql (2.8.1)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
@@ -66,7 +66,7 @@ GEM
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
     orm_adapter (0.0.5)
-    paperclip (2.3.16)
+    paperclip (2.4.5)
       activerecord (>= 2.3.0)
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
@@ -113,7 +113,7 @@ DEPENDENCIES
   capistrano-ext
   devise
   faker
-  mysql2
+  mysql
   paperclip
   populator
   rails (= 3.0.10)
