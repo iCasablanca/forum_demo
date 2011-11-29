@@ -10,6 +10,12 @@
   <%= @post.content %>
 </p>
 
+<% if @post.excerpt_image? %>
+  <p>
+  <%= image_tag(@post.excerpt_image.url(:medium)) %>
+  </p>
+<% end %>
+
 <% if current_user && current_user.is_admin? %>
 <%= link_to 'A-Edit', edit_admin_board_post_path(@board,@post) %> |
 <% end %>

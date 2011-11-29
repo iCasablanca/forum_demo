@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'powder'
 gem 'devise'
 gem 'will_paginate'
+gem 'paperclip'
 
 # Use unicorn as the web server
 # gem 'unicorn'
