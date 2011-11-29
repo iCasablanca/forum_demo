@@ -26,12 +26,6 @@ namespace :deploy do
   end
 end
 
-namespace :rake do
-  task :show_tasks do
-    run("cd #{deploy_to}/current; /usr/bin/rake -T")
-  end
-end
-
 desc "Creat database.yml and asset packages for production"
 after("deploy:update_code") do
   db_config = "#{shared_path}/database.yml.production"
