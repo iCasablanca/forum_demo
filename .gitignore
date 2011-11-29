@@ -4,3 +4,4 @@ db/production.sqlite3
 db/test.sqlite3
 db/development.sqlite3
 shared/config/database.yml.production
+lib/tasks/deploy.rake
