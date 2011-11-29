@@ -10,6 +10,8 @@ gem 'powder'
 gem 'devise'
 gem 'will_paginate'
 gem 'paperclip'
+gem 'populator'
+gem 'faker'
 
 # Use unicorn as the web server
 # gem 'unicorn'
