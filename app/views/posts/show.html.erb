@@ -10,7 +10,7 @@
   <%= @post.content %>
 </p>
 
-<% if current_user && @post.user == current_user %>
-<%= link_to 'Edit', edit_board_post_path(@board,@post) %> |
+<% if current_user && current_user.is_admin? %>
+<%= link_to 'A-Edit', edit_admin_board_post_path(@board,@post) %> |
 <% end %>
 <%= link_to 'Back', board_posts_path(@board) %>

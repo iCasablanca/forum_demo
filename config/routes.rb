@@ -1,6 +1,12 @@
 ForumDemo::Application.routes.draw do
   devise_for :users
 
+  namespace :admin do
+    resources :boards do
+      resources :posts
+    end
+  end
+
   resources :boards do
     resources :posts
   end
