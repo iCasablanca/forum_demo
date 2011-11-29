@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_filter :find_board
   # GET /posts
   # GET /posts.xml
   def index
@@ -9,7 +10,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.xml
   def show
-    @board = Board.find(params[:board_id])
+#    @board = Board.find(params[:board_id])
     @post = @board.posts.find(params[:id])
 
     respond_to do |format|
@@ -21,7 +22,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   # GET /posts/new.xml
   def new
-    @board = Board.find(params[:board_id])
+#    @board = Board.find(params[:board_id])
     @post = @board.posts.build
 
     respond_to do |format|
@@ -32,14 +33,14 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
-    @board = Board.find(params[:board_id])
+#    @board = Board.find(params[:board_id])
     @post = @board.posts.find(params[:id])
   end
 
   # POST /posts
   # POST /posts.xml
   def create
-    @board = Board.find(params[:board_id])
+#    @board = Board.find(params[:board_id])
     @post = @board.posts.build(params[:post])
 
     respond_to do |format|
@@ -56,7 +57,7 @@ class PostsController < ApplicationController
   # PUT /posts/1
   # PUT /posts/1.xml
   def update
-    @board = Board.find(params[:board_id])
+#    @board = Board.find(params[:board_id])
     @post = @board.posts.find(params[:id])
 
     respond_to do |format|
@@ -73,7 +74,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.xml
   def destroy
-    @board = Board.find(params[:board_id])
+#    @board = Board.find(params[:board_id])
     @post = @board.posts.find(params[:id])
     @post.destroy
 
@@ -81,5 +82,10 @@ class PostsController < ApplicationController
       format.html { redirect_to(board_posts_path(@board,@post)) }
       format.xml  { head :ok }
     end
+  end
+
+protected
+  def find_board
+    @board = Board.find(params[:board_id])
   end
 end
