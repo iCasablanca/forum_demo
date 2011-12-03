@@ -96,3 +96,8 @@ end
 #    run "cd #{current_path}; rake db:schema:load"
 #  end
 #end
+
+#desc "Search Remote Application Server Libraries"
+#task :search_libs, :roles => :app do
+#    run "ls -x1 /usr/lib | grep -i xml"
+#end
